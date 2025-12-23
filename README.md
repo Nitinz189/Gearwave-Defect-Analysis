@@ -122,10 +122,15 @@ The dataset contains **1,000 defect records** collected over **6 months** with t
 
 ## Repository Structure
 | File | Description |
+
 | `Creating_database_and_table.sql` | Database and table setup |
+
 | `SQL_analysis.sql` | SQL queries for defect analysis |
+
 | `defects_cleaned_data.csv` | Cleaned dataset |
+
 | `GEARWAVE (Defect Analysis).pptx` | Executive summary and visuals |
+
 
 ---
 
