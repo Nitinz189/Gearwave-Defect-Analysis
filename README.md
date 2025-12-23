@@ -65,6 +65,8 @@ The dataset contains **1,000 defect records** collected over **6 months** with t
 - Overall defect volume declined by **approximately 21%** over six months
 - Month-to-month fluctuations indicate quality improvements are not yet fully stabilized
 
+[Defect count change over time](https://github.com/Nitinz189/Gearwave-Defect-Analysis/blob/main/images/Screenshot%202025-12-23%20051338.png)
+
 ### Defect Type Contribution
 - Structural defects contribute **35.2%** of total defects
 - Functional defects contribute **33.9%**
