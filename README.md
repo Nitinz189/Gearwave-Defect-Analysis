@@ -1,17 +1,17 @@
 # Gearwave Defect Analysis
 
-## Project Overview
-This project analyzes manufacturing defect data for a fictional bike parts manufacturer, Gearwave.  
-The objective is to identify defect trends, cost drivers, and quality risk areas to support production and manufacturing decision-making.
+## Project Context
+Gearwave is a fictional bike parts manufacturing company.  
+In this project, I worked as a **Junior Data Analyst** supporting the production and manufacturing teams to analyze defect data and identify opportunities for quality improvement.
 
-The analysis focuses on understanding where defects occur, which defects are most costly, and how inspection methods impact repair cost and defect severity.
+The analysis focuses on understanding defect trends, cost drivers, inspection effectiveness, and product-level quality issues using historical defect data.
 
 ---
 
-## Business Problem
-The production and manufacturing teams raised the following questions:
+## Business Questions
+The manufacturing and production teams raised the following key questions:
 
-1. How has the defect trend changed over time?
+1. How has the defect rate changed over time?
 2. Which defect types contribute the most to overall defects?
 3. Which defect types are the most expensive to fix?
 4. How does defect severity impact repair cost?
@@ -22,78 +22,114 @@ The production and manufacturing teams raised the following questions:
 
 ---
 
-## Dataset Description
-- Time period: Last 6 months  
-- Records: 1,000 defect records  
-- Data type: Manufacturing quality data  
+## Dataset Overview
+The dataset contains **1,000 defect records** collected over **6 months** with the following fields:
 
-### Key Columns
 - `defect_id` – Unique identifier for each defect  
-- `product_id` – Product associated with the defect  
-- `defect_type` – Cosmetic, Functional, Structural  
+- `product_id` – Identifier for the affected product  
+- `defect_type` – Cosmetic, Functional, or Structural  
 - `defect_description` – Description of the defect  
-- `defect_date` – Date the defect was detected  
-- `defect_location` – Surface, Internal, Component  
-- `severity` – Minor, Moderate, Critical  
-- `inspection_method` – Visual, Manual, Automated  
-- `repair_action` – Action taken to fix the defect  
-- `repair_cost` – Cost incurred to repair the defect  
+- `defect_date` – Date when the defect was detected  
+- `defect_location` – Surface, Internal, or Component  
+- `severity` – Minor, Moderate, or Critical  
+- `inspection_method` – Visual, Manual, or Automated testing  
+- `repair_action` – Action taken to resolve the defect  
+- `repair_cost` – Cost incurred for repair  
 
 ---
 
-## Tools Used
-- Excel – Initial data review and date standardization  
-- SQL (PostgreSQL) – Data analysis and aggregation  
-- Tableau – Visualization and dashboard creation  
+## Data Preparation
+**Excel**
+- Identified inconsistent date formats where some dates were stored as text
+- Converted all dates into Excel date serial format for consistency
+
+**SQL (PostgreSQL)**
+- Created a dedicated database and table structure
+- Inserted cleaned data into PostgreSQL
+- Performed all analysis using SQL queries for accuracy and scalability
+
+---
+
+## Analysis Approach
+1. Cleaned and standardized raw defect data
+2. Created database tables in PostgreSQL
+3. Used SQL to perform aggregation, grouping, and trend analysis
+4. Analyzed defect trends, severity, inspection methods, and repair costs
+5. Summarized findings into business-focused insights and recommendations
 
 ---
 
 ## Key Insights
 
-### Defect Trend
-- Defect volume decreased by approximately 21% over six months
-- Month-to-month fluctuations indicate process stability is not yet consistent
+### Defect Trend Over Time
+- Overall defect volume declined by **approximately 21%** over six months
+- Month-to-month fluctuations indicate quality improvements are not yet fully stabilized
 
-### Defect Types
-- Structural and functional defects together account for approximately 69% of total defects
-- Defect distribution is relatively balanced, indicating multiple quality issues
+### Defect Type Contribution
+- Structural defects contribute **35.2%** of total defects
+- Functional defects contribute **33.9%**
+- Together, these two categories account for nearly **69% of all defects**
 
-### Repair Cost
-- Structural defects generate the highest total repair cost due to volume
-- Cosmetic defects have a higher average repair cost per defect, indicating intensive rework
+### Repair Cost by Defect Type
+- Structural defects generate the **highest total repair cost** due to volume
+- Cosmetic defects have a **higher average repair cost per defect**, indicating higher rework effort per incident
 
-### Severity Impact
-- Minor defects contribute higher total cost due to frequency
-- Critical defects have the highest average repair cost per incident, representing higher risk
+### Severity vs Repair Cost
+- Minor defects contribute higher **total cost** due to frequency
+- Critical defects have the **highest average repair cost**, making them high-risk issues
 
-### Inspection Methods
-- Manual testing detects the highest number of critical defects, likely influenced by inspection volume
-- Automated testing shows lower average repair cost and lower share of total repair cost, indicating better cost efficiency through early detection
+### Inspection Method Effectiveness
+- Manual inspection detects the highest number of critical defects
+- Visual inspection follows closely
+- Automated testing detects fewer defects but shows better cost efficiency
 
-### Product-Level Analysis
-- A small set of products, particularly Product 63 and Product 81, consistently show high defect counts
-- These products require targeted root-cause analysis
-
-### Defect Location
+### Defect Location and Severity
 - Internal and surface locations show a slightly higher association with critical defects
-- Severity risk exists across all locations
+- Severity risk is distributed across all locations, not isolated to one area
+
+### Inspection Method vs Repair Cost
+- Manual testing contributes the highest share of total repair cost (36.5%)
+- Automated testing has the **lowest average repair cost**, indicating earlier defect detection
+
+### Product-Level Defects
+- A small number of products account for a large share of defects
+- Products **63 and 81** are the most defect-prone, indicating recurring quality issues
 
 ---
 
-## Management Recommendations
+## Business Impact
+- High-cost defects can be reduced by focusing on structural and critical defects
+- Early detection through automated testing reduces downstream repair costs
+- Targeted analysis of high-defect products enables focused quality improvements
+
+---
+
+## Recommendations
 - Prioritize reduction of structural and functional defects
 - Introduce automated testing earlier in the production process
-- Perform focused root-cause analysis on high-defect products
-- Maintain a balanced inspection strategy combining manual, visual, and automated methods
+- Conduct root-cause analysis on products with recurring defects (e.g., 63 and 81)
+- Use a balanced mix of manual, visual, and automated inspections to optimize cost and coverage
+
+---
+
+## Tools Used
+- SQL (PostgreSQL)
+- Excel
+- Tableau
+- PowerPoint
+
+---
+
+## Repository Structure
+| File | Description |
+| `Creating_database_and_table.sql` | Database and table setup |
+| `SQL_analysis.sql` | SQL queries for defect analysis |
+| `defects_cleaned_data.csv` | Cleaned dataset |
+| `GEARWAVE (Defect Analysis).pptx` | Executive summary and visuals |
 
 ---
 
 ## Conclusion
-This analysis demonstrates how defect data can be used to identify quality risks, cost drivers, and improvement opportunities.  
-The findings support proactive defect prevention, early detection, and targeted corrective actions to improve overall manufacturing quality and cost efficiency.
-
----
-
-## Author
-Nitin Vishwakarma  
-Junior Data Analyst (Project Case Study)
+This project demonstrates an end-to-end junior data analyst workflow, including
+data cleaning, SQL-based analysis, trend evaluation, and translating results into
+business-focused insights to support manufacturing quality decisions.
