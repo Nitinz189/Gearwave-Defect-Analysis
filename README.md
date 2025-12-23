@@ -107,15 +107,37 @@ The dataset contains **1,000 defect records** collected over **6 months** with t
 - Targeted analysis of high-defect products enables focused quality improvements
 
 ---
-
-## Recommendations
-- Prioritize reduction of structural and functional defects
-- Introduce automated testing earlier in the production process
-- Conduct root-cause analysis on products with recurring defects (e.g., 63 and 81)
-- Use a balanced mix of manual, visual, and automated inspections to optimize cost and coverage
+## Root Cause Hypotheses
+- High defect products may involve complex assemblies or tighter tolerances
+- Structural defects may originate from material quality or welding processes
+- Internal defects suggest process control issues during early production stages
 
 ---
+## Recommendation Prioritization
+Based on impact versus implementation effort:
 
+- **High Impact / Low Effort**
+  - Expand automated testing earlier in the production cycle to reduce downstream repair costs
+
+- **High Impact / High Effort**
+  - Conduct detailed root-cause analysis on recurring structural defects
+  - Review design and process controls for high-defect products (Product 63 and 81)
+
+- **Low Impact / Low Effort**
+  - Continue monitoring cosmetic defect trends monthly to control defect volume
+
+
+---
+## Success Metrics
+To evaluate the effectiveness of corrective actions, the following KPIs should be monitored:
+
+- Monthly defect rate
+- Average repair cost per defect
+- Percentage of critical defects
+- Defect concentration by product
+- Repair cost by inspection method
+
+---
 ## Tools Used
 - SQL (PostgreSQL)
 - Excel
