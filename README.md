@@ -97,6 +97,8 @@ The dataset contains **1,000 defect records** collected over **6 months** with t
 - A small number of products account for a large share of defects
 - Products **63 and 81** are the most defect-prone, indicating recurring quality issues
 
+![Product with highest defect counts](https://github.com/Nitinz189/Gearwave-Defect-Analysis/blob/main/images/Screenshot%202025-12-23%20045224.png)
+
 ---
 
 ## Business Impact
