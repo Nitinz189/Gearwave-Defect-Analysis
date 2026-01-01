@@ -11,7 +11,7 @@ The analysis focuses on understanding defect trends, cost drivers, inspection ef
 ## Business Questions
 The manufacturing and production teams raised the following key questions:
 
-1. How has the defect rate changed over time?
+1. How has the defect trend changed over time?
 2. Which defect types contribute the most to overall defects?
 3. Which defect types are the most expensive to fix?
 4. How does defect severity impact repair cost?
@@ -20,8 +20,15 @@ The manufacturing and production teams raised the following key questions:
 7. Do certain inspection methods lead to lower repair costs?
 8. Which products generate the highest number of defects?
 
+
 ---
 
+## Business Impact
+- High-cost defects can be reduced by focusing on structural and critical defects
+- Early detection through automated testing reduces downstream repair costs
+- Targeted analysis of high-defect products enables focused quality improvements
+  
+---
 ## Dataset Overview
 The dataset contains **1,000 defect records** collected over **6 months** with the following fields:
 
@@ -99,12 +106,7 @@ The dataset contains **1,000 defect records** collected over **6 months** with t
 
 ![Product with highest defect counts](https://github.com/Nitinz189/Gearwave-Defect-Analysis/blob/main/images/Screenshot%202025-12-23%20045224.png)
 
----
 
-## Business Impact
-- High-cost defects can be reduced by focusing on structural and critical defects
-- Early detection through automated testing reduces downstream repair costs
-- Targeted analysis of high-defect products enables focused quality improvements
 
 ---
 ## Root Cause Hypotheses
